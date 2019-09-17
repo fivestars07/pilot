@@ -1,0 +1,63 @@
+﻿@{ 
+    ViewData["Title"] = "Join Page";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            <form asp-controller="Account" asp-action="Join" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">id</label>
+                    <div class="col-md-10">
+                        <input type="text" name="id" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Password</label>
+                    <div class="col-md-10">
+                        <input type="password" name="pwd" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">이름</label>
+                    <div class="col-md-10">
+                        <input type="text" name="userName" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">email</label>
+                    <div class="col-md-10">
+                        <input type="text" name="email" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">phone</label>
+                    <div class="col-md-10">
+                        <input type="text" name="phone" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">role</label>
+                    <div class="col-md-10">
+                        <select class="form-control" name="role">
+                            <option value="">--- choose ---</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-default">Join in</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
