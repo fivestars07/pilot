@@ -14,5 +14,7 @@ namespace APP.DAL.APPContext
 
         public DbSet<UserLogin> UserLogins { get; set; }
 
+        public DbSet<TargetUser> TargetUsers { get; set; }
+
     }
 }

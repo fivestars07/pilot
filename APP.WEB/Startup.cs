@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using APP.BLL;
+using APP.BLL.TargetUserBll;
 using APP.DAL;
 using APP.DAL.APPContext;
 using APP.IDAL;
@@ -39,11 +40,14 @@ namespace APP.WEB
             });
 
             services.AddTransient<IAccountDal, AccountDal>();
+            services.AddTransient<ITargetUserDal, TargetUserDal>();
             services.AddTransient<AccountBll>();
+            services.AddTransient<TargetUserBll>();
             services.AddTransient<UserInfo>();
             services.AddTransient<UserLogin>();
             services.AddTransient<UserAll>();
             services.AddTransient<ClaimInfo>();
+            services.AddTransient<TargetUser>();
 
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BSDContext")));
 
